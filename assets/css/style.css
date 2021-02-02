@@ -14,7 +14,7 @@ body{
 
 .navbar{
 
-    background-color: #011f2c !important;
+    background-color: #131a22 !important;
 }
 
 .nav-link{
@@ -127,4 +127,16 @@ body{
     font-size: 1rem;
     background-color: #f7a943;
     border: 1px #f7a943 solid;
+}
+
+footer{
+
+    background-color: #232f3e;
+    color: white;
+}
+
+footer>ul>li>a{
+
+  text-decoration: none;
+  color: white;
 }
