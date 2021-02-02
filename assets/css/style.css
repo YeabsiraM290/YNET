@@ -1,3 +1,17 @@
+body{
+
+    font-family: 'Roboto Slab', serif;
+    background-color: #eaeded;
+
+}
+
+.navbar-brand{
+
+    font-size: 2rem;
+    font-family: 'Lobster', cursive;
+    color: grey !important;
+}
+
 .navbar{
 
     background-color: #011f2c !important;
@@ -25,6 +39,11 @@
     border-top-left-radius: 0px ;
     border: 1px #f7a943 solid;
     
+}
+
+.brandIcon{
+
+    color: white;
 }
 
 .menuIcon{
@@ -63,3 +82,49 @@
     font-size: 2rem;
 }
 
+.sildeshowIcons{
+
+    font-size: 3rem !important;
+
+}
+
+.d-block{
+
+    width: 85rem;
+    height: 30rem;
+}
+
+.card{
+
+    background-color:#eaeded;
+    border: none;
+}
+
+.card-title>a{
+
+    font-size: 1rem;
+    color: black !important;
+    font-weight: bold;
+}
+
+.shopNowLink{
+
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.jumbotron{
+
+    background-color: white;
+}
+
+.seeAllButton{
+
+    border-radius: 0.8rem;
+    width: 19rem;
+    height: 3rem;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #f7a943;
+    border: 1px #f7a943 solid;
+}
