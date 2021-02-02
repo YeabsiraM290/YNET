@@ -5,6 +5,23 @@ body{
 
 }
 
+.dropdown:hover>.dropdown-menu {
+    display: block;
+
+}
+  
+.dropdown>.dropdown-toggle:active {
+    
+      pointer-events: none;
+}
+  
+.dropdownBtn{
+
+    border: none;
+
+}
+
+
 .navbar-brand{
 
     font-size: 2rem;
