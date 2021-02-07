@@ -4,54 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seller</title>
+
+    <script src="https://kit.fontawesome.com/b30976267e.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css"> 
-    <link rel="stylesheet" href="assets\css\seller.css">
+    <link rel="stylesheet" href="./assets/css/seller.css"> 
+
+    
+    <title>Seller</title>
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+  <!--Nav-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-           <span class="navbar-toggler-icon"></span>
-        </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+    </button>
+   
+       <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+        <ul class="navbar-nav">
+
+          <div class="dropdown">
+            <button class="dropdownBtn mr-3 mt-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-bars menuIcon"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+            <li class="nav-item mr-5 "> <a class="navbar-brand" href="index.html" data-abc="true">YNET
+              <span><i class="fas fa-tags brandIcon"></i></span></a>  </li>
+
+            <li class="nav-item  ">  <form class="form-inline mt-2"> <input class="form-control searchBar" type="text" placeholder="Search"> 
+              <button class="btn btn-secondary searchButton" type="submit"><i class="fas fa-search searchIcon"></i></button> </form> </li>
+            
+            <li class="nav-item ml-5 "> <a class="nav-link" href="#" data-abc="true"><i class="fas fa-user-circle userIcon"></i>
+              <p class="userLoginLabel ml-1">Welcome<br><b class="loginSubtitle">User Name</b></p></a> </li>
+
+            <li class="nav-item mt-3 ml-4"> <p class="loginSubtitle ml-2">Balance<br><b class="userLoginLabel">2000 coin</b></p></a> </li>
+            <li class="nav-item ml-4 mt-2 ml-2"> <a class="nav-link" href="cart.html" data-abc="true"><i class="fas fa-shopping-cart cartIcon"></i></a> </li>
+        </ul>
        
-           <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    
-            <ul class="navbar-nav">
-    
-              <div class="dropdown">
-                <button class="dropdownBtn mr-3 mt-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fas fa-bars menuIcon"></i>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-              </div>
-                <li class="nav-item mr-5 "> <a class="navbar-brand" href="index.html" data-abc="true">YNET
-                  <span><i class="fas fa-tags brandIcon"></i></span></a>  </li>
-    
-                <li class="nav-item  ">  <form class="form-inline mt-2"> <input class="form-control searchBar" type="text" placeholder="Search"> 
-                  <button class="btn btn-secondary searchButton" type="submit"><i class="fas fa-search searchIcon"></i></button> </form> </li>
-                
-                <li class="nav-item ml-5 "> <a class="nav-link" href="#" data-abc="true"><i class="fas fa-user-circle userIcon"></i>
-                  <p class="userLoginLabel ml-1">Welcome<br><b class="loginSubtitle">User Name</b></p></a> </li>
-    
-                <li class="nav-item mt-3 ml-4"> <p class="loginSubtitle ml-2">Balance<br><b class="userLoginLabel">2000 coin</b></p></a> </li>
-                <li class="nav-item ml-4 mt-2 ml-2"> <a class="nav-link" href="#" data-abc="true"><i class="fas fa-shopping-cart cartIcon"></i></a> </li>
-            </ul>
-           
-        </div>
-    </nav>
+    </div>
+</nav>
+<!-- end nav -->
 
-    <div class="row ml-3 mr-3">
-
-        <div class="col-5">
         <!-- profile -->
         <div class="container profilecontainer mt-5 mb-5">
         
@@ -92,7 +98,7 @@
                 <input type="text" readonly class="form-control" id="Phone_Number" value="0923-34-45-56">
               </div>
         
-              <a href="" style="color: orange;" class="change ml-3 mt-2">Change password</a>
+              <a href="" style="color: orange;" class="change ml-3 mt-4">Change password</a>
               
         
             </div>
@@ -107,43 +113,88 @@
           </form>
         
         </div>
-        </div>
-        <div class="col-7">
-            <div class="container profilecontainer mt-5 mb-5">
-              <h1 class="display-4 text-center">Product</h1>
-              <br>
-              <hr class="ml-auto">
-              <div class="row mt-5">
-                <div class="col productColumn"><img src="" alt="img">Product name<input type="name" value="PC" class="inputField ml-5"></div>
-                <div class="col productColumn">Quantity<input type="number" value="1" class="inputField ml-5"></div>
-                <div class="col productColumn">Price<input type="number" value="1" class="inputField ml-5"></div>
-            </div>
-            <div class="row mt-5">
-              <div class="col productColumn"><img src="" alt="img">Product name<input type="name" value="PC" class="inputField ml-5"></div>
-              <div class="col productColumn">Quantity<input type="number" value="1" class="inputField ml-5"></div>
-              <div class="col productColumn">Price<input type="number" value="1" class="inputField ml-5"></div>
-          </div>
-          <div class="row mt-5">
-            <div class="col productColumn"><img src="" alt="img">Product name<input type="name" value="PC" class="inputField ml-5"></div>
-            <div class="col productColumn">Quantity<input type="number" value="1" class="inputField ml-5"></div>
-            <div class="col productColumn">Price<input type="number" value="1" class="inputField ml-5"></div>
-        </div>
-        <div class="row mt-5">
-          <div class="col productColumn"><img src="" alt="img">Product name<input type="name" value="PC" class="inputField ml-5"></div>
-          <div class="col productColumn">Quantity<input type="number" value="1" class="inputField ml-5"></div>
-          <div class="col productColumn">Price<input type="number" value="1" class="inputField ml-5"></div>
-      </div>
-          <div class="row mt-5">
-            <div class="col productColumn"> <img src="" alt="img">Product name<input type="name" value="PC" class="inputField ml-5"></div>
-            <div class="col productColumn">Quantity<input type="number" value="1" class="inputField ml-5"></div>
-            <div class="col productColumn">Price<input type="number" value="1" class="inputField ml-5"></div>
-        </div>
+        <div class=" mt-5 mb-5">
+
+          <h1 class="display-4 text-center">My Products</h1>
           
-            </div>
+          <hr class="ml-auto">
+          
+          <div class="row cartRow firstRow mb-4">
+            <div class="col-6 mt-4"><img style="float: left;" src="./assets/images/mac.jpg" alt="First slide" width="200px" height="200px">
+               Product name....<br>
+               <hr>
+               <p >
+              Sold: 45<br>
+              Rating: <i class="fas fa-star"></i> <i class="fas fa-star-half-alt"></i>
+                      <i class="far fa-star"></i><i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+              </p>
+             </div>
+        
+              <div class="col-2 mt-4">
+                Avilable Amount: 
+                <input type="number" value="1" class="inputField ml-5 quantity text-center" >
+                
+              </div>
+             
+            <div class="col-3 mt-4"><h5><b>Price: <br>$50.00</b></h5></div>
+            <div class="col-1 mt-2">  <a href="#" class="edit"><i class="fa fa-edit"></i></a><i class="far fa-trash-alt"></i></div>
+          </div>
+
+          <div class="row cartRow mb-4">
+            <div class="col-6 mt-4"><img style="float: left;" src="./assets/images/mac.jpg" alt="First slide" width="200px" height="200px">
+               Product name....<br>
+               <hr>
+               <p >
+              Sold: 45<br>
+              Rating: <i class="fas fa-star"></i> <i class="fas fa-star-half-alt"></i>
+                      <i class="far fa-star"></i><i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+              </p>
+             </div>
+        
+              <div class="col-2 mt-4">
+                Avilable Amount: 
+                <input type="number" value="1" class="inputField ml-5 quantity text-center" >
+                
+              </div>
+             
+            <div class="col-3 mt-4"><h5><b>Price: <br>$50.00</b></h5></div>
+            <div class="col-1 mt-2">  <a href="#" class="edit"><i class="fa fa-edit"></i></a><i class="far fa-trash-alt"></i></div>
+          </div>
+        
+
+          <div class="row cartRow mb-5">
+            <div class="col-6 mt-4"><img style="float: left;" src="./assets/images/mac.jpg" alt="First slide" width="200px" height="200px">
+               Product name....<br>
+               <hr>
+               <p >
+              Sold: 45<br>
+              Rating: <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i> <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+              </p>
+             </div>
+        
+              <div class="col-2 mt-4">
+                Avilable Amount: 
+                <input type="number" value="1" class="inputField ml-5 quantity text-center" >
+                
+              </div>
+             
+            <div class="col-3 mt-4"><h5><b>Price: <br>$50.00</b></h5></div>
+            <div class="col-1 mt-2">  <a href="#" class="edit"><i class="fa fa-edit"></i></a><i class="far fa-trash-alt"></i></div>
+          </div>
+        
+        
+        </div>
+        
+        
+       
             <!-- orders comp -->
-          </div>
+         
           
-          </div>
+
           <footer class="text-center text-lg-start">
  
             <div class="container p-5">

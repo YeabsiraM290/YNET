@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/b30976267e.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -12,8 +17,8 @@
     <title>Cart</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
-
+     <!--Nav-->
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
            <span class="navbar-toggler-icon"></span>
@@ -23,110 +28,171 @@
     
             <ul class="navbar-nav">
     
-                <li class="nav-item mr-3 mt-2"> <a class="nav-link" href="#" data-abc="true"><i class="fas fa-bars menuIcon"></i></a> </li>
-                <li class="nav-item mr-5 "> <a class="navbar-brand" href="#" data-abc="true">YNET
+              <div class="dropdown">
+                <button class="dropdownBtn mr-3 mt-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-bars menuIcon"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+                <li class="nav-item mr-5 "> <a class="navbar-brand" href="index.html" data-abc="true">YNET
                   <span><i class="fas fa-tags brandIcon"></i></span></a>  </li>
     
                 <li class="nav-item  ">  <form class="form-inline mt-2"> <input class="form-control searchBar" type="text" placeholder="Search"> 
                   <button class="btn btn-secondary searchButton" type="submit"><i class="fas fa-search searchIcon"></i></button> </form> </li>
                 
-                <li class="nav-item ml-5 "> <a class="nav-link" href="./account.html" data-abc="true"><i class="fas fa-user-circle userIcon"></i>
-                  <p class="userLoginLabel ml-1">Welcome<br><b class="loginSubtitle">sign in / Register</b></p></a> </li>
+                <li class="nav-item ml-5 "> <a class="nav-link" href="#" data-abc="true"><i class="fas fa-user-circle userIcon"></i>
+                  <p class="userLoginLabel ml-1">Welcome<br><b class="loginSubtitle">User Name</b></p></a> </li>
     
-                <li class="nav-item mt-3 ml-4"> <a class="nav-link sellerIcon" href="seller.html" data-abc="true"><b>Seller</b></a> </li>
-                <li class="nav-item ml-4 mt-2"> <a class="nav-link" href="cart.html" data-abc="true"><i class="fas fa-shopping-cart cartIcon"></i></a> </li>
+                <li class="nav-item mt-3 ml-4"> <p class="loginSubtitle ml-2">Balance<br><b class="userLoginLabel">2000 coin</b></p></a> </li>
+                <li class="nav-item ml-4 mt-2 ml-2"> <a class="nav-link" href="cart.html" data-abc="true"><i class="fas fa-shopping-cart cartIcon"></i></a> </li>
             </ul>
            
         </div>
     </nav>
-
-    <div class="row cartRow ml-3 mr-3 mt-5 mb-5">
-        <div class="col-10 mt-4">Product name <input type="number" value="1" class="inputField ml-5" ></div>
-        <div class="col-2 mt-4">$50.00<input type="submit" value="Buy" class="buyBut ml-5"></div>
-      </div>
-  
-      <div class="row cartRow ml-3 mr-3 mt-5 mb-5">
-        <div class="col-10 mt-4">Product name <input type="number" value="1" class="inputField ml-5" ></div>
-        <div class="col-2 mt-4">$50.00<input type="submit" value="Buy" class="buyBut ml-5"></div>
-      </div>
-      <div class="row cartRow ml-3 mr-3 mt-5 mb-5">
-        <div class="col-10 mt-4">Product name <input type="number" value="1" class="inputField ml-5" ></div>
-        <div class="col-2 mt-4">$50.00<input type="submit" value="Buy" class="buyBut ml-5"></div>
-      </div>
-      <div class="row cartRow ml-3 mr-3 mt-5 mb-5">
-        <div class="col-10 mt-4">Product name <input type="number" value="1" class="inputField ml-5" ></div>
-        <div class="col-2 mt-4">$50.00<input type="submit" value="Buy" class="buyBut ml-5"></div>
-      </div>
-  
-      <div class="row cartRow ml-3 mr-3 mt-5 mb-5">
-        <div class="col-10 mt-4">Product name <input type="number" value="1" class="inputField ml-5" ></div>
-        <div class="col-2 mt-4">$50.00<input type="submit" value="Buy" class="buyBut ml-5"></div>
-      </div>
-
-      <footer class="text-center text-lg-start">
- 
-        <div class="container p-5">
-         
-          <div class="row">
+<!-- end nav -->
+<div class="title">
+  <h5 class="display-4 mt-5" style="font-size: 2rem !important;">Shopping Cart </h5>
           
-            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Footer Content</h5>
-      
-              <p id="footerParagraph">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-                voluptatem veniam, est atque cumque eum delectus sint!
-              </p>
-            </div>
+<hr class="ml-auto">
+</div>
+
+
+  <div class="row cartRow firstRow mb-4">
+    <div class="col-6 mt-4"><img style="float: left;" src="./assets/images/mac.jpg" alt="First slide" width="200px" height="200px">
+       Product name....<br>
+       <hr>
+       <p >
+        Product discription: values<br>
+        Product discription: values<br>
+        Product discription: values<br>
+        Product discription: values
+      </p>
+     </div>
+
+      <div class="col-2 mt-4">
+        <input type="number" value="1" class="inputField ml-5 quantity text-center" >
         
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Links</h5>
-      
-              <ul class="list-unstyled mb-0">
-                <li>
-                  <a href="#!" class="">Link 1</a>
-                </li>
-                <li>
-                  <a href="#!" class="">Link 2</a>
-                </li>
-                <li>
-                  <a href="#!" class="">Link 3</a>
-                </li>
-                <li>
-                  <a href="#!" class="">Link 4</a>
-                </li>
-              </ul>
-            </div>
-         
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase mb-0">Links</h5>
-      
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#!" class="">Link 1</a>
-                </li>
-                <li>
-                  <a href="#!" class="">Link 2</a>
-                </li>
-                <li>
-                  <a href="#!" class="">Link 3</a>
-                </li>
-                <li>
-                  <a href="#!" class="">Link 4</a>
-                </li>
-              </ul>
-            </div>
-           
-          </div>
-          
-        <div class="text-center p-3">
-          © 2021 Copyright:
-          <a class="" href="#"></a>
-        </div>
-      
-        </div>
-      
-      
-      </footer>
+      </div>
+     
+    <div class="col-3 mt-4"><h5><b>$50.00</b></h5><input type="submit" value="Buy" class="buyBut"></div>
+    <div class="col-1 mt-2"><i class="far fa-trash-alt"></i></div>
+  </div>
+
+  <div class="row cartRow mb-4">
+    <div class="col-6 mt-4"><img style="float: left;" src="./assets/images/mac.jpg" alt="First slide" width="200px" height="200px">
+       Product name....<br>
+       <hr>
+       <p >
+        Product discription: values<br>
+        Product discription: values<br>
+        Product discription: values<br>
+        Product discription: values
+      </p>
+     </div>
+
+      <div class="col-2 mt-4">
+        <input type="number" value="1" class="inputField ml-5 quantity text-center" >
+        
+      </div>
+     
+    <div class="col-3 mt-4"><h5><b>$50.00</b></h5><input type="submit" value="Buy" class="buyBut"></div>
+    <div class="col-1 mt-2"><i class="far fa-trash-alt"></i></div>
+  </div>
+
+  <div class="row cartRow mb-5">
+    <div class="col-6 mt-4"><img style="float: left;" src="./assets/images/mac.jpg" alt="First slide" width="200px" height="200px">
+       Product name....<br>
+       <hr>
+       <p >
+        Product discription: values<br>
+        Product discription: values<br>
+        Product discription: values<br>
+        Product discription: values
+      </p>
+     </div>
+
+      <div class="col-2 mt-4">
+        <input type="number" value="1" class="inputField ml-5 quantity text-center" >
+        
+      </div>
+     
+    <div class="col-3 mt-4"><h5><b>$50.00</b></h5><input type="submit" value="Buy" class="buyBut"></div>
+    <div class="col-1 mt-2"><i class="far fa-trash-alt"></i></div>
+  </div>
+
+
+
+<!-- Footer -->
+<footer class="text-center text-lg-start">
+ 
+  <div class="container p-5">
+   
+    <div class="row">
+    
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Footer Content</h5>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+          molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
+          voluptatem veniam, est atque cumque eum delectus sint!
+        </p>
+      </div>
+  
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a href="#!" class="">Link 1</a>
+          </li>
+          <li>
+            <a href="#!" class="">Link 2</a>
+          </li>
+          <li>
+            <a href="#!" class="">Link 3</a>
+          </li>
+          <li>
+            <a href="#!" class="">Link 4</a>
+          </li>
+        </ul>
+      </div>
+   
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-0">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" class="">Link 1</a>
+          </li>
+          <li>
+            <a href="#!" class="">Link 2</a>
+          </li>
+          <li>
+            <a href="#!" class="">Link 3</a>
+          </li>
+          <li>
+            <a href="#!" class="">Link 4</a>
+          </li>
+        </ul>
+      </div>
+     
+    </div>
+    
+  <div class="text-center p-3">
+    © 2021 Copyright:
+    <a class="" href="#"></a>
+  </div>
+
+  </div>
+
+
+</footer>
+<!-- Footer -->         
+       
 </body>
 </html>
