@@ -1,0 +1,55 @@
+.form-control{
+
+    border: none;
+}
+
+.fa-edit{
+
+    color: black;
+}
+
+.edit{
+
+    float: right;
+}
+
+.profilecontainer{
+
+    border-radius: 1.5rem;
+    height: 40rem;
+    background-color: white;
+}
+
+.form-group{
+
+    color: black;
+}
+
+.input{
+
+    color: black !important;
+}
+
+.saveBtn{
+
+    border-radius: 0.8rem;
+    width: 19rem;
+    height: 3rem;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #f7a943;
+    border: 1px #f7a943 solid;
+    color: black;
+}
+
+.passBtn{
+
+    border-radius: 0.8rem;
+    width: 9rem;
+    height: 2.5rem;
+    font-weight: bold;
+    font-size: 0.8rem;
+    background-color: #ee9118;
+    border: 1px #ee9118 solid;
+
+}
