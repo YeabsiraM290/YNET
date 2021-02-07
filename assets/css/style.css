@@ -82,11 +82,13 @@ body{
 
     float: right;
     font-size: 0.7rem;
+    color: white;
 }
 
 .loginSubtitle{
 
     font-size: 1rem;
+    color: white;
 }
 
 .sellerIcon{

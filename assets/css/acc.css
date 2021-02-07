@@ -1,125 +1,36 @@
+.form-control{
 
-body{
-
-    font-family: 'Roboto Slab', serif;
-    background-color: #eaeded;
-
-}
-
-.navbar-brand{
-
-    font-size: 2rem;
-    font-family: 'Lobster', cursive;
-    color: grey !important;
-}
-
-.navbar{
-
-    background-color: #131a22 !important;
-}
-
-.nav-link{
-
-    color: white !important;
-}
-
-.searchBar{
-
-    height: 2.5rem;
-    width: 40rem !important;
-    border-bottom-right-radius: 0px ;
-    border-top-right-radius: 0px ;
-  
-}
-
-.searchButton{
-
-    height: 2.5rem !important;
-    background-color: #f7a943;
-    border-bottom-left-radius: 0px ;
-    border-top-left-radius: 0px ;
-    border: 1px #f7a943 solid;
-    
-}
-
-.brandIcon{
-
-    color: white;
-}
-
-.menuIcon{
-
-    font-size: 1.5rem;
-}
-
-.searchIcon{
-
-    color: grey;
-}
-
-.userIcon{
-
-    font-size: 2.5rem;
-}
-
-.userLoginLabel{
-
-    float: right;
-    font-size: 0.7rem;
-}
-
-.loginSubtitle{
-
-    font-size: 1rem;
-}
-
-.sellerIcon{
-
-    font-size: 1rem;
-}
-
-.cartIcon{
-
-    font-size: 2rem;
-}
-
-.sildeshowIcons{
-
-    font-size: 3rem !important;
-
-}
-
-.d-block{
-
-    width: 85rem;
-    height: 30rem;
-}
-
-.card{
-
-    background-color:#eaeded;
     border: none;
 }
 
-.card-title>a{
+.fa-edit{
 
-    font-size: 1rem;
-    color: black !important;
-    font-weight: bold;
+    color: black;
 }
 
-.shopNowLink{
+.edit{
 
-    font-size: 0.9rem;
-    font-weight: bold;
+    float: right;
 }
 
-.jumbotron{
+.profilecontainer{
 
+    border-radius: 1.5rem;
+    height: 40rem;
     background-color: white;
 }
 
-.seeAllButton{
+.form-group{
+
+    color: black;
+}
+
+.input{
+
+    color: black !important;
+}
+
+.saveBtn{
 
     border-radius: 0.8rem;
     width: 19rem;
@@ -128,23 +39,17 @@ body{
     font-size: 1rem;
     background-color: #f7a943;
     border: 1px #f7a943 solid;
+    color: black;
 }
 
-footer{
+.passBtn{
 
-    background-color: #232f3e;
-    color: white;
-}
+    border-radius: 0.8rem;
+    width: 9rem;
+    height: 2.5rem;
+    font-weight: bold;
+    font-size: 0.8rem;
+    background-color: #ee9118;
+    border: 1px #ee9118 solid;
 
-footer>ul>li>a{
-
-  text-decoration: none;
-  color: white;
 }
-.jumbotron{
-    margin: 5rem 5rem 5rem;
-}
-.display-4{
-    margin: 1rem ;
-}
-
