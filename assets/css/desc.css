@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+body{
+    font-family:'Poppins',sans-serif;
+    
+}
+.desc_content>.container{
+    width:940px;
+    margin:50px auto 0;
+    
+    padding:15px;
+    border-radius: 5px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+.description{
+    margin:50px 0 10px 0;
+    font-weight: 300;
+}
+.xzoom-thumbs img{
+    display:inline-block;
+    height: 80px;
+    width:80px;
+    border:1px solid #cccc;
+}
+
+.navbar-brand{
+
+    font-size: 2rem;
+    font-family: 'Lobster', cursive;
+    color: grey !important;
+}
+
+.navbar{
+
+    background-color: #131a22 !important;
+}
+
+.nav-link{
+
+    color: white !important;
+}
+
+.searchBar{
+
+    height: 2.5rem;
+    width: 40rem !important;
+    border-bottom-right-radius: 0px ;
+    border-top-right-radius: 0px ;
+  
+}
+
+.searchButton{
+
+    height: 2.5rem !important;
+    background-color: #f7a943;
+    border-bottom-left-radius: 0px ;
+    border-top-left-radius: 0px ;
+    border: 1px #f7a943 solid;
+    
+}
+
+.brandIcon{
+
+    color: white;
+}
+
+.menuIcon{
+
+    font-size: 1.5rem;
+}
+
+.searchIcon{
+
+    color: grey;
+}
+
+.userIcon{
+
+    font-size: 2.5rem;
+}
+
+.userLoginLabel{
+
+    float: right;
+    font-size: 0.7rem;
+}
+
+.loginSubtitle{
+
+    font-size: 1rem;
+}
+
+.sellerIcon{
+
+    font-size: 1rem;
+}
+
+.cartIcon{
+
+    font-size: 2rem;
+}
+
+
+
+
+
+
+footer{
+
+    background-color: #232f3e;
+    color: white;
+}
+
+footer>ul>li>a{
+
+  text-decoration: none;
+  color: white;
+}
+#about_item{
+    width: 40rem;
+}
+#desc_button{
+    display:grid
+}
+
+
+
+
+
+/* #a1a1bb */
