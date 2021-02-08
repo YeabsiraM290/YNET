@@ -1,0 +1,17 @@
+.cartRow
+{
+   background-color: white;
+   height: 5rem;
+   border-radius: 1rem; 
+}
+.inputField
+{
+    border: none;
+    width: 3rem;
+    background-color: white;
+
+}
+.buyBut
+{
+    background-color: #f7a943;
+}
