@@ -53,3 +53,16 @@
     border: 1px #ee9118 solid;
 
 }
+.cartRow
+{
+   background-color: white;
+   height: 5rem;
+   border-radius: 1rem; 
+}
+.inputField
+{
+    border: none;
+    width: 3rem;
+    background-color: white;
+
+}
