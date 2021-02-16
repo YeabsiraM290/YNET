@@ -177,4 +177,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+    addNewItem = function (desc, seller, ppts, price, name, img1, img2, img3, img4, quantity, avilable, dep, sold) {
+        
+        let newIteminfo= {
+
+            description: desc,
+            seller: seller,
+            properties: ppts,
+            price: price,
+            name: name,
+            image1: img1,
+            image2: img2,
+            image3: img3,
+            image4: img4,
+            quantity: quantity,
+            aviliable: avilable,
+            department: dep,
+            sold: sold,
+        }
+
+        let transaction = DB.transaction(['items'], 'readwrite');
+
+        let objectStoreTologin = transaction.objectStore('items');
+
+        let request = objectStoreTologin.add(newIteminfo);
+
+        request.onsuccess = () => {
+                
+            return true;
+        }
+
+        request.onerror = () =>{
+
+            return false;
+        }
+
+    }
+
 });
+
+export{DB,addNewItem,addNewseller,addNewuser,addTologin};
