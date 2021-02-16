@@ -20,42 +20,54 @@
 
 </head>
 <body>
-  <!--Nav-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+      <!--Nav-->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon"></span>
-    </button>
-   
-       <div class="collapse navbar-collapse" id="navbarNavDropdown">
 
-        <ul class="navbar-nav">
-
-          <div class="dropdown">
-            <button class="dropdownBtn mr-3 mt-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-bars menuIcon"></i>
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </div>
-            <li class="nav-item mr-5 "> <a class="navbar-brand" href="index.html" data-abc="true">YNET
-              <span><i class="fas fa-tags brandIcon"></i></span></a>  </li>
-
-            <li class="nav-item  ">  <form class="form-inline mt-2"> <input class="form-control searchBar" type="text" placeholder="Search"> 
-              <button class="btn btn-secondary searchButton" type="submit"><i class="fas fa-search searchIcon"></i></button> </form> </li>
-            
-            <li class="nav-item ml-5 "> <a class="nav-link" href="#" data-abc="true"><i class="fas fa-user-circle userIcon"></i>
-              <p class="userLoginLabel ml-1">Welcome<br><b class="loginSubtitle">User Name</b></p></a> </li>
-
-            <li class="nav-item mt-3 ml-4"> <p class="loginSubtitle ml-2">Balance<br><b class="userLoginLabel">2000 coin</b></p></a> </li>
-            <li class="nav-item ml-4 mt-2 ml-2"> <a class="nav-link" href="cart.html" data-abc="true"><i class="fas fa-shopping-cart cartIcon"></i></a> </li>
-        </ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+        </button>
        
-    </div>
-</nav>
+           <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    
+            <ul class="navbar-nav">
+    
+              <div class="dropdown">
+                <button class="dropdownBtn mr-3 mt-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-bars menuIcon"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <p class="dropdown-item"><b>Shop by department</b></p>
+                  <a class="dropdown-item mt-3" href="#">Electronics </a>
+                  <a class="dropdown-item mt-3" href="#">Home and tools</a>
+                  <a class="dropdown-item mt-3" href="#">Health and sport</a>
+                  <a class="dropdown-item mt-3" href="#">Software and services</a>
+                  <a class="dropdown-item mt-3" href="#">Automative and industrial</a>
+                  <a class="dropdown-item mt-3" href="#">Toys and drones</a>
+                  <a class="dropdown-item mt-3" href="#">Gaming</a>
+                  <a class="dropdown-item mt-3" href="#">Office solutions</a>
+                  <a class="dropdown-item mt-3" href="#">Beauty and personal care</a>
+                  <a class="dropdown-item mt-3" href="#">Movies and television</a>
+                  <a class="dropdown-item mt-3" href="#">Sports and outdoors</a>
+                  <a class="dropdown-item mt-3" href="#">Arts and crafts</a>
+                  <a class="dropdown-item mt-3" href="#">Smart home</a>
+                </div>
+              </div>
+                <li class="nav-item mr-5 "> <a class="navbar-brand" href="index.html" data-abc="true">YNET
+                  <span><i class="fas fa-tags brandIcon"></i></span></a>  </li>
+    
+                <li class="nav-item  ">  <form class="form-inline mt-2"> <input class="form-control searchBar" type="text" placeholder="Search"> 
+                  <button class="btn btn-secondary searchButton" type="submit"><i class="fas fa-search searchIcon"></i></button> </form> </li>
+                
+                <li class="nav-item ml-5 "> <a class="nav-link" href="#loginWindow" data-toggle="modal" data-abc="true"><i class="fas fa-user-circle userIcon"></i>
+                  <p class="userLoginLabel ml-1">Welcome<br><b class="loginSubtitle">sign in / Register</b></p></a> </li>
+    
+                <li class="nav-item mt-3 ml-3"> <a class="nav-link sellerIcon" href="vendorRegistration.html" data-abc="true"><b>Vendor</b></a> </li>
+                <li class="nav-item ml-4 mt-2"> <a class="nav-link" href="cart.html" data-abc="true"><i class="fas fa-shopping-cart cartIcon"></i></a> </li>
+            </ul>
+           
+        </div>
+    </nav>
 <!-- end nav -->
 
         <!-- profile -->
@@ -111,13 +123,15 @@
           
           
           </form>
-        
+          
         </div>
         <div class=" mt-5 mb-5">
 
           <h1 class="display-4 text-center">My Products</h1>
           
           <hr class="ml-auto">
+          
+          <a style="font-size: 2rem; margin-left: 80rem; color: black;"  href="newProduct.html" ><i class="fas fa-plus"></i></a>
           
           <div class="row cartRow firstRow mb-4">
             <div class="col-6 mt-4"><img style="float: left;" src="./assets/images/mac.jpg" alt="First slide" width="200px" height="200px">
