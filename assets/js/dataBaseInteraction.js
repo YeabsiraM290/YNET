@@ -82,4 +82,99 @@ document.addEventListener('DOMContentLoaded', () => {
         cart_tabel.createIndex('seller_name', 'seller_name', { unique: false });
 
     }
+
+     //Adding to database functions
+
+     //to add users to login table for login validation(both buyer and seller)
+     addTologin = function (uName, email, password, balance, user_type) {
+        
+        let addtoLogin= {
+
+            username: uName,
+            email: email,
+            balance:balance,
+            password: password,
+            user_type : user_type,
+        }
+
+        let transaction = DB.transaction(['login'], 'readwrite');
+
+        let objectStoreTologin = transaction.objectStore('login');
+
+        let request = objectStoreTologin.add(addtoLogin);
+
+        request.onsuccess = () => {
+                
+            return true;
+        }
+
+        request.onerror = () =>{
+
+            return false;
+        }
+
+    }
+
+    // adds new users in to users(buyer) tabels    
+    addNewuser = function (uName, email, password) {
+        
+        let newUserinfo= {
+            
+            username: uName,
+            email: email,
+            balance: '1000',
+            password: password,
+        }
+
+        let transaction = DB.transaction(['users'], 'readwrite');
+        let objectStoreNewuser = transaction.objectStore('users');
+        let request = objectStoreNewuser.add(newUserinfo);
+
+
+        request.onsuccess = () => {
+                
+            return true;
+        }
+
+        request.onerror = () =>{
+
+            return false;
+        }
+
+    }
+
+    // adds a new vendor to the vendor tabel
+    addNewseller = function (uName, email, password, pNo, socialNo, location, disc, cname,plan) {
+        
+        let newUserinfo= {
+            
+            username: uName,
+            email: email,
+            balance: '1000',
+            password: password,
+            phone_no: pNo,
+            social_no: socialNo,
+            location: location,
+            description: disc,
+            company_name: cname,
+            plan: plan,
+        }
+
+        let transaction = DB.transaction(['vendors'], 'readwrite');
+        let objectStoreNewuser = transaction.objectStore('vendors');
+        let request = objectStoreNewuser.add(newUserinfo);
+
+
+        request.onsuccess = () => {
+                
+            return true;
+        }
+
+        request.onerror = () =>{
+
+            return false;
+        }
+
+    }
+
 });
