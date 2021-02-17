@@ -70,4 +70,30 @@ import * as helpers from './helper.js';
                 item_price.style.borderColor = "red";
                 item_price.placeholder = "Enter valid price";
                 allG=1;
-            }}
+            }
+            if(allG==0){
+
+                let dis = item_dis.value;
+                let ppt = item_ppts.value
+                let pric = item_price.value
+                let iname = item_name.value
+                let qun = item_quantity.value
+                let dep = item_department.value
+    
+                addtoDb.addNewItem(dis,"Alemayehu",ppt,pric,iname,item_img1Address,item_img2Address,item_img3Address,item_img4Address, qun,qun,dep,"0")
+                
+                item_name.value = "";
+                item_quantity.value = "";
+                item_price.value = "";
+                item_dis.value = "";
+                item_ppts.value = "";
+                item_img1.src = " ";
+                item_img2.src = " ";
+                item_img3.src = " ";
+                item_img4.src = " ";
+            }
+         
+    
+    
+    }
+    
