@@ -37,3 +37,75 @@ function displayInfo(){
     profile_email.value = whoLoged.out[3];
     id = whoLoged.out[4];
 }
+f(profile_saveBtn){profile_saveBtn.addEventListener('click',savedNew)}
+function savedNew(){
+
+    if(passChanged=1){
+
+        let passLen = helpers.checkLength(profile_newpass.value,8);
+        let passEquality = helpers.comparePass(profile_newpass.value,profile_ConNewpass.value);
+
+        if(passLen){
+            console.log("passssssssss")
+
+            if(passEquality){
+
+                console.log('done')
+                editDb.loginUpdate(profile_username.value,profile_email.value,profile_newpass.value,profile_balance.value,'true','buyer',id);
+                editDb.userUpdate(profile_username.value,profile_email.value,profile_newpass.value,profile_balance.value,id);
+            }
+
+            else{
+            
+                profile_ConNewpass.style.backgroundColor = "red";}
+        }
+
+        else{
+
+            profile_newpass.style.backgroundColor = "red";
+        }
+    }
+
+    else{
+
+        editDb.loginUpdate(profile_username.value,profile_email.value,oldPass,profile_balance.value,'true','buyer',id);
+        editDb.userUpdate(profile_username.value,profile_email.value,oldPass,profile_balance.value,id);
+    }
+
+}
+
+
+if(editBtn){editBtn.addEventListener('click',editValidate)}
+
+function editValidate(){
+
+    console.log("edited")
+    profile_username.disabled=false;
+    profile_username.focus();
+    profile_username.style.backgroundColor= "#d8d8d8";
+
+    profile_balance.disabled=false;
+    profile_balance.style.backgroundColor= "#d8d8d8";
+
+    profile_saveBtn.disabled = false;
+    
+}
+
+profile_changepass.addEventListener('click',changePass)
+function changePass(e){
+    e.preventDefault();
+
+    profile_saveBtn.disabled = false;
+    passChanged = 1;
+    profile_changepassContainer.style.display = 'block';
+
+}
+
+if(logOutBtn){logOutBtn.addEventListener('click',logOut)}
+
+function logOut(){
+
+    editDb.loginUpdate(profile_username.value,profile_email.value,oldPass,profile_balance.value,'false','buyer',id);
+    window.location.replace("http://127.0.0.1:5502/index.html");
+    
+}
