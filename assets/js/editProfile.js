@@ -37,7 +37,8 @@ function displayInfo(){
     profile_email.value = whoLoged.out[3];
     id = whoLoged.out[4];
 }
-f(profile_saveBtn){profile_saveBtn.addEventListener('click',savedNew)}
+
+if(profile_saveBtn){profile_saveBtn.addEventListener('click',savedNew)}
 function savedNew(){
 
     if(passChanged=1){
