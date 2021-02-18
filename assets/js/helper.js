@@ -19,6 +19,7 @@ function ValidateEmail(mail){
 
    return (false)
 }
+
 function comparePass(mainPass, secondPass){
 
     if(mainPass==secondPass){
@@ -42,18 +43,15 @@ function validatePhoneNumber(phoneno)
 
 function checkLength(item,len){
 
-    if(item.length < len){
-    
-        return false;
-        }
-    
-    else{
-    
-        return true;
-        }
+if(item.length < len){
+
+    return false;
     }
-    
-    export{checkSign,ValidateEmail,comparePass,validatePhoneNumber,checkLength}
-    
 
+else{
 
+    return true;
+    }
+}
+
+export{checkSign,ValidateEmail,comparePass,validatePhoneNumber,checkLength}

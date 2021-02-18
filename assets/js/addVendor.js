@@ -17,6 +17,7 @@ let plan = 0;
 import * as addtoDB from './dataBaseInteraction.js';
 import * as helpers from './helper.js'
 
+
 if(vendor_signup){ vendor_signup.addEventListener('click', userInfoValidation);}
 if(plan_button){ 
     plan_button.forEach(element => {
@@ -146,10 +147,31 @@ function userInfoValidation(e){
                 let vlocation = vendor_lat.value + vendor_long.value;
                 let vdisc = vendor_dis.value;
                 let vcname = vendor_companyname.value;
-            
-                addtoDB.addNewseller(vusername, vpassword, vemail,vphoneno,vsocialno,vlocation,vdisc,vcname,plan);
-                addtoDB.addTologin(vusername, vpassword, vemail, "seller");
+                         
+                addtoDB.addNewseller(vusername,vemail, vpassword ,vphoneno,vsocialno,vlocation,vdisc,vcname,plan);
+                addtoDB.addTologin(vusername, vemail, vpassword, "seller");
+
+                vendor_username.value = '';
+                vendor_email.value = ''; 
+                vendor_password.value = ''; 
+                vendor_confirmpass.value = ''; 
+                vendor_phoneno.value = ''; 
+                vendor_securityno.value = ''; 
+                vendor_lat.value = ''; 
+                vendor_long.value = ''; 
+                vendor_dis.value = ''; 
+                vendor_companyname.value = ''; 
+
+                vendor_username.style.borderColor = 'grey';
+                vendor_email.style.borderColor = 'grey';
+                vendor_password.style.borderColor = 'grey'; 
+                vendor_confirmpass.style.borderColor = 'grey';
+                vendor_phoneno.style.borderColor = 'grey';
+                vendor_securityno.style.borderColor = 'grey';
+                vendor_lat.style.borderColor = 'grey';
+                vendor_long.style.borderColor = 'grey';
+                vendor_dis.style.borderColor = 'grey';
+                vendor_companyname.style.borderColor = 'grey';
             
             }
-
 }

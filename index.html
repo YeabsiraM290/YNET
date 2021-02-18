@@ -52,20 +52,22 @@
                 <li class="nav-item mr-5 "> <a class="navbar-brand" href="index.html" data-abc="true">YNET
                   <span><i class="fas fa-tags brandIcon"></i></span></a>  </li>
     
-                <li class="nav-item">  <form class="form-inline mt-2"> <input class="form-control searchBar" type="text" placeholder="Search"> 
+                <li class="nav-item  ">  <form class="form-inline mt-2"> <input class="form-control searchBar" type="text" placeholder="Search"> 
                   <button class="btn btn-secondary searchButton" type="submit"><i class="fas fa-search searchIcon"></i></button> </form> </li>
                 
-                  <li class="nav-item ml-5 "> <a class="nav-link profile" href="#loginWindow" data-toggle="modal" data-abc="true"><i class="fas fa-user-circle userIcon"></i>
-                    <p class="userLoginLabel ml-1">Welcome<br><b class="loginSubtitle">sign in / Register</b></p></a> </li>
+                <li class="nav-item ml-5 profile"> <a class="nav-link profile" href="#loginWindow" data-toggle="modal" data-abc="true"><i class="fas fa-user-circle userIcon"></i>
+                  <p class="userLoginLabel ml-1">Welcome<br><b class="loginSubtitle">sign in / Register</b></p></a> </li>
     
-                    <li class="nav-item mt-3 ml-3 vendorIcon"> <a class="nav-link sellerIcon" href="vendorRegistration.html" data-abc="true"><b class="vendor_balance">Vendor</b></a> </li>
-                    <li class="nav-item ml-4 mt-1 cartIcon"> <a class="nav-link" href="cart.html" data-abc="true"><i class="fas fa-shopping-cart cartIcon"></i></a> </li>
+                <li class="nav-item mt-3 ml-3 vendorIcon balance"> <a class="nav-link sellerIcon" href="vendorRegistration.html" data-abc="true"><b class="vendor_balance">Vendor</b></a> </li>
+                <li class="nav-item ml-4 mt-1 cartIcon"> <a class="nav-link" href="cart.html" data-abc="true"><i class="fas fa-shopping-cart cartIcon"></i></a> </li>
             </ul>
            
         </div>
     </nav>
 
+
 <!--User Login Window-->
+
 <div id="loginWindow" class="modal loginModal fade text-center">
 
   <div class="modal-dialog">
@@ -114,9 +116,10 @@
 
   </div>
 
-</div> 
+</div>
 
 <!--User Signup Window-->
+
 <div id="buyerSignup" class="modal signupModal fade text-center">
 
   <div class="modal-dialog">
@@ -177,26 +180,19 @@
 
 </div>
 
+
+
 <!--Slide show-->
+
 
 <div id="sildeShowContainer" class="carousel slide ml-3 mr-3 mt-3" data-ride="carousel">
 
   <ol class="carousel-indicators">
-    <li data-bs-target="#sildeShowContainer" data-bs-slide-to="0" class="active"></li>
-    <li data-bs-target="#sildeShowContainer" data-bs-slide-to="1"></li>
-    <li data-bs-target="#sildeShowContainer" data-bs-slide-to="2"></li>
+ 
   </ol>
 
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block" src="./assets/images/mac.jpg" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block" src="./assets/images/s20.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block" src="./assets/images/cup.jpg" alt="Third slide">
-    </div>
+  
   </div>
 
   <a class="carousel-control-prev" href="#sildeShowContainer" role="button" data-slide="prev">
@@ -423,13 +419,14 @@
 <!-- Footer -->
 
     
-<script src="./assets/js/dataBaseInteraction.js" type="module"></script>
-<script src="./assets/js/login_validate.js" type="module"></script>
-<script src="./assets/js/addUser.js" type="module"></script>
-<script src="https://kit.fontawesome.com/0024212ba5.js" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./assets/js/dataBaseInteraction.js" type="module"></script>
+    <script src="./assets/js/display_home.js" type="module"></script>
+    <script src="./assets/js/login_validate.js" type="module"></script>
+    <script src="./assets/js/addUser.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/0024212ba5.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
 </html>

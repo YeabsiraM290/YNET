@@ -1,3 +1,4 @@
+//inputs and buttons newProduct page
 let item_name = document.querySelector('.item-name');
 let item_department = document.querySelector('.item-department');
 let item_quantity = document.querySelector('.item-quantity');
@@ -71,6 +72,8 @@ import * as helpers from './helper.js';
                 item_price.placeholder = "Enter valid price";
                 allG=1;
             }
+    
+    
             if(allG==0){
 
                 let dis = item_dis.value;
@@ -80,7 +83,7 @@ import * as helpers from './helper.js';
                 let qun = item_quantity.value
                 let dep = item_department.value
     
-                addtoDb.addNewItem(dis,"Alemayehu",ppt,pric,iname,item_img1Address,item_img2Address,item_img3Address,item_img4Address, qun,qun,dep,"0")
+                addtoDb.addNewItem(dis,"Yeabsira",ppt,pric,iname,item_img1Address,item_img2Address,item_img3Address,item_img4Address, qun,qun,dep,"0")
                 
                 item_name.value = "";
                 item_quantity.value = "";
@@ -93,7 +96,5 @@ import * as helpers from './helper.js';
                 item_img4.src = " ";
             }
          
-    
-    
     }
     

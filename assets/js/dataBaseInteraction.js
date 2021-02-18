@@ -4,13 +4,17 @@ let addNewuser;
 let addNewseller;
 let addNewItem;
 let editProfile;
+let fetch_img;
+let loginUpdate;
+let whoLoged;
+let userUpdate;
 
 document.addEventListener('DOMContentLoaded', () => {
 
-     //creating database
-     let ynet_storage = indexedDB.open('Ynet_storage', 1);
+    //creating database
+    let ynet_storage = indexedDB.open('Ynet_storage', 1);
 
-     ynet_storage.onsuccess = function() {
+    ynet_storage.onsuccess = function() {
 
         DB = ynet_storage.result;
     }
@@ -27,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
         user_tabel.createIndex('balance', 'balance', { unique: false });
         user_tabel.createIndex('password', 'password', { unique: false });
 
-        
         //Vendors tabel
         let vendors_tabel = db.createObjectStore('vendors', { keyPath: 'id', autoIncrement: true});
         vendors_tabel.createIndex('username', 'username', { unique: true });
@@ -48,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         loginValidation_tabel.createIndex('password', 'password', { unique: false });
         loginValidation_tabel.createIndex('balance', 'balance', { unique: false });
         loginValidation_tabel.createIndex('user_type', 'user_type', { unique: false });
+        loginValidation_tabel.createIndex('logedin', 'logedin', { unique: false });
 
         //items tabel
         let items_tabel = db.createObjectStore('items', { keyPath: 'id', autoIncrement: true});
@@ -60,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         items_tabel.createIndex('quantity', 'quantity', { unique: false });
         items_tabel.createIndex('aviliable', 'aviliable', { unique: false });
         items_tabel.createIndex('sold', 'sold', { unique: false });
-        items_tabel.createIndex('price', 'prce', { unique: false });
+        items_tabel.createIndex('price', 'Price', { unique: false });
         items_tabel.createIndex('department', 'department', { unique: false });
         items_tabel.createIndex('properties', 'properties', { unique: false });
         items_tabel.createIndex('description', 'description', { unique: false });
@@ -74,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
         orderhistory_tabel.createIndex('image', 'image', { unique: false });
         orderhistory_tabel.createIndex('price', 'price', { unique: false });
 
-        
         //cart tabel
         let cart_tabel = db.createObjectStore('cart', { keyPath: 'id', autoIncrement: true});
         cart_tabel.createIndex('buyer_username', 'buyer_username', { unique: false });
@@ -83,10 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-     //Adding to database functions
 
-     //to add users to login table for login validation(both buyer and seller)
-     addTologin = function (uName, email, password, balance, user_type) {
+    //Adding to database functions
+    addTologin = function (uName, email, password, balance, user_type) {
         
         let addtoLogin= {
 
@@ -115,7 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    // adds new users in to users(buyer) tabels    
     addNewuser = function (uName, email, password) {
         
         let newUserinfo= {
@@ -143,7 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    // adds a new vendor to the vendor tabel
     addNewseller = function (uName, email, password, pNo, socialNo, location, disc, cname,plan) {
         
         let newUserinfo= {
@@ -214,6 +214,101 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-});
+    editProfile = function (id,username, password, blance,email) {
+        
+        let editInfo= {
 
-export{DB,addNewItem,addNewseller,addNewuser,addTologin};
+            username: username,
+            email: email,
+            balance:balance,
+            password: password,
+            user_type : user_type,
+        }
+
+        let transaction = DB.transaction(['login'], 'readwrite');
+
+        let editDataLogin = transaction.objectStore('login');
+
+        let request = editDataLogin.put(addtoLogin);
+
+        request.onsuccess = () => {
+                
+            
+        }
+
+        request.onerror = () =>{
+
+            
+        }
+
+    }
+
+    userUpdate = function (Uname,Email,password,balance,id){
+
+        let transaction = DB.transaction(['users'], 'readwrite');
+        let objectStore = transaction.objectStore('users');
+    
+        let newValue = {
+            id:id,
+            username:Uname,
+            email:Email,
+            password:password,
+            balance:balance,
+        }
+    
+        objectStore.put(newValue); 
+    }
+
+    loginUpdate = function (Uname,Email,password,balance,logged,type,id){
+
+        let transaction = DB.transaction(['login'], 'readwrite');
+        let objectStore = transaction.objectStore('login');
+    
+        let newValue = {
+            id:id,
+            username:Uname,
+            email:Email,
+            password:password,
+            user_type:type,
+            balance:balance,
+            logedin:logged,
+        }
+    
+        objectStore.put(newValue); 
+    }
+
+    fetch_img = function(quantity){
+     
+        let imgs=[];
+        let counter = 0;
+    
+        let transaction = DB.transaction(['items'], 'readwrite');
+
+        let objectStore = transaction.objectStore('items');
+
+        let request = objectStore.openCursor();
+    
+            request.onerror = function(event) {
+                console.err("error fetching data");
+            };
+        
+            request.onsuccess = function(event) {
+            let cursor = event.target.result;
+        
+                if (cursor) {
+                    imgs.push(cursor.value.image1);
+                    cursor.continue();
+                }
+                            
+            }
+
+            return imgs;
+    }
+
+  });
+
+  export{DB,addNewItem,addNewseller,addNewuser,addTologin,fetch_img,loginUpdate,whoLoged,userUpdate};
+
+
+
+  

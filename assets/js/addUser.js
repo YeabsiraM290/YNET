@@ -9,6 +9,7 @@ let signupModal = document.querySelector('.signupModal');
 
 import * as addtoDB from './dataBaseInteraction.js';
 import * as helpers from './helper.js'
+
 if(signupBtn){ signupBtn.addEventListener('click', userInfoValidation);}
 
 function userInfoValidation(e){
@@ -74,4 +75,5 @@ function userInfoValidation(e){
                 addtoDB.addTologin(username, uEmail, password, balance, "buyer");
             
             }
+
 }

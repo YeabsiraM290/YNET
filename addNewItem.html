@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Add Product</title>
 </head>
 <body>
-    <div id="registerForm" class="row ml-5 mr-5">
+
+      <div id="registerForm" class="row ml-5 mr-5">
 
         <div class="col-12 mt-5">
             <h1 class="display-4 text-center">Product  Form</h1>
@@ -80,70 +80,72 @@
 
                 <div class="row mt-4">
 
-                    <div class="col-6">
-  
-                      <div class="form-group">
-                          <label for="des">Description : </label>
-                            <textarea class="form-control item-dis" name="des" type="textarea" style="height: 10rem !important;" placeholder="Write brief description about your product, your customers will see this" ></textarea>
-                        </div>
-                       
-                    </div>
-  
-                    <div class="col-6">
-                      <div class="form-group">
-                          <label for="ppts">Properties: </label>
-                          <textarea type="text" name="ppts" class="form-control item-ppts" style="height: 10rem !important;"  placeholder="Enter some properties about your product"></textarea>
-                        </div>
-                    </div>
-  
-                </div>
-  
-                <p >Add images : </p>
-                <div class="row mt-4">
-                  
-                  <div class="col-3">
-  
+                  <div class="col-6">
+
                     <div class="form-group">
-                        <label for="img1">Image 1 : </label>
-                        <input type="file" accept=".jpg, .jpeg, .png" name="img1" class="itemimg1 form-control " onchange="document.getElementById('0').src = window.URL.createObjectURL(this.files[0])" />
-                        <img id="0" class="item-img1 mt-2" src=" " height="200" width="200" alt=" ">
+                        <label for="des">Description : </label>
+                          <textarea class="form-control item-dis" name="des" type="textarea" style="height: 10rem !important;" placeholder="Write brief description about your product, your customers will see this" ></textarea>
                       </div>
                      
                   </div>
-  
-                  <div class="col-3">
-  
-                      <div class="form-group">
-                          <label for="img2">Image 2 : </label>
-                          <input type='file' accept=".jpg, .jpeg, .png" name="img2" class="itemimg2 form-control " onchange="document.getElementById('1').src = window.URL.createObjectURL(this.files[0])" />
-                          <img id="1" class="item-img2 mt-2"  src=" " height="200" width="200" alt=" ">
+
+                  <div class="col-6">
+                    <div class="form-group">
+                        <label for="ppts">Properties: </label>
+                        <textarea type="text" name="ppts" class="form-control item-ppts" style="height: 10rem !important;"  placeholder="Enter some properties about your product"></textarea>
                       </div>
-                       
-                    </div>
-  
-                    
-                    <div class="col-3">
-  
-                      <div class="form-group">
-                          <label for="img3">Image 3 : </label>
-                          <input type='file' accept=".jpg, .jpeg, .png" name="img3" class="itemimg3 form-control " onchange="document.getElementById('2').src = window.URL.createObjectURL(this.files[0])"/>
-                          <img id="2" class="item-img3 mt-2"  src=" " height="200" width="200" alt=" ">
-                      </div>
-                       
-                    </div>
-  
-                    
-                    <div class="col-3">
-  
-                      <div class="form-group">
-                          <label for="img4">Image 4 : </label>
-                          <input type='file' accept=".jpg, .jpeg, .png" name="img4" class="itemimg4 form-control " onchange="document.getElementById('3').src = window.URL.createObjectURL(this.files[0])"/>
-                          <img id="3" class="item-img4 mt-2" src=" " height="200" width="200" alt=" ">
-                      </div>
-                       
-                    </div>
-  
+                  </div>
+
               </div>
+
+              <p >Add images : </p>
+              <div class="row mt-4">
+                
+                <div class="col-3">
+
+                  <div class="form-group">
+                      <label for="img1">Image 1 : </label>
+                      <input type="file" accept=".jpg, .jpeg, .png" name="img1" class="itemimg1 form-control " onchange="document.getElementById('0').src = window.URL.createObjectURL(this.files[0])" />
+                      <img id="0" class="item-img1 mt-2" src=" " height="200" width="200" alt=" ">
+                    </div>
+                   
+                </div>
+
+                <div class="col-3">
+
+                    <div class="form-group">
+                        <label for="img2">Image 2 : </label>
+                        <input type='file' accept=".jpg, .jpeg, .png" name="img2" class="itemimg2 form-control " onchange="document.getElementById('1').src = window.URL.createObjectURL(this.files[0])" />
+                        <img id="1" class="item-img2 mt-2"  src=" " height="200" width="200" alt=" ">
+                    </div>
+                     
+                  </div>
+
+                  
+                  <div class="col-3">
+
+                    <div class="form-group">
+                        <label for="img3">Image 3 : </label>
+                        <input type='file' accept=".jpg, .jpeg, .png" name="img3" class="itemimg3 form-control " onchange="document.getElementById('2').src = window.URL.createObjectURL(this.files[0])"/>
+                        <img id="2" class="item-img3 mt-2"  src=" " height="200" width="200" alt=" ">
+                    </div>
+                     
+                  </div>
+
+                  
+                  <div class="col-3">
+
+                    <div class="form-group">
+                        <label for="img4">Image 4 : </label>
+                        <input type='file' accept=".jpg, .jpeg, .png" name="img4" class="itemimg4 form-control " onchange="document.getElementById('3').src = window.URL.createObjectURL(this.files[0])"/>
+                        <img id="3" class="item-img4 mt-2" src=" " height="200" width="200" alt=" ">
+                    </div>
+                     
+                  </div>
+
+            </div>
+           
+  
               <div class="form-group text-center mb-5">
 
                 <button type="submit" style="background-color: #f7a943; border: none; font-size: 1.2rem;" class="btn btn-primary btn-lg btn-block item-add mt-5">Add</button>
@@ -155,6 +157,7 @@
           </div>
 
       </div>
-      <script src="/assets/js/addItem.js" type="module"></script>
+
+      <script src="./assets/js/addItem.js" type="module"></script>
 </body>
 </html>
