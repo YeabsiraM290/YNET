@@ -1,6 +1,5 @@
 import * as editDb from './dataBaseInteraction.js';
 import * as helpers from './helper.js'; 
-import * as whoLoged from './login_validate.js'
 
 let profile_username = document.querySelector('.profile_username');
 let profile_email = document.querySelector('.profile_email');
@@ -20,27 +19,18 @@ profile_changepassContainer.style.display = 'none';
 
 let editBtn = document.querySelector('.editBtn');
 
-
-setTimeout(() => {
-
-    displayInfo();
-    
-}, 900);
-
+displayInfo();
 function displayInfo(){
 
-    whoLoged.whoLoged();
-
-    profile_username.value = whoLoged.out[0];
-    oldPass = whoLoged.out[1]
-    profile_balance.value = whoLoged.out[2];
-    profile_email.value = whoLoged.out[3];
-    id = whoLoged.out[4];
+    profile_username.value = sessionStorage.getItem('username');
+    oldPass =  sessionStorage.getItem('password');
+    profile_balance.value = sessionStorage.getItem('balance');
+    profile_email.value = sessionStorage.getItem('email');
+    id =   sessionStorage.getItem('id');
 }
 
-if(profile_saveBtn){profile_saveBtn.addEventListener('click',savedNew)}
+profile_saveBtn.addEventListener('click',savedNew)
 function savedNew(){
-
     if(passChanged=1){
 
         let passLen = helpers.checkLength(profile_newpass.value,8);
@@ -52,12 +42,13 @@ function savedNew(){
             if(passEquality){
 
                 console.log('done')
-                editDb.loginUpdate(profile_username.value,profile_email.value,profile_newpass.value,profile_balance.value,'true','buyer',id);
+                editDb.loginUpdate(profile_username.value,profile_email.value,profile_newpass.value,profile_balance.value,'buyer',id);
                 editDb.userUpdate(profile_username.value,profile_email.value,profile_newpass.value,profile_balance.value,id);
+                addSession(id,profile_username.value,profile_email.value,profile_balance.value,profile_newpass.value,'buyer')
             }
 
             else{
-            
+
                 profile_ConNewpass.style.backgroundColor = "red";}
         }
 
@@ -68,9 +59,10 @@ function savedNew(){
     }
 
     else{
-
-        editDb.loginUpdate(profile_username.value,profile_email.value,oldPass,profile_balance.value,'true','buyer',id);
+        
+        editDb.loginUpdate(profile_username.value,profile_email.value,oldPass,profile_balance.value,'buyer',id);
         editDb.userUpdate(profile_username.value,profile_email.value,oldPass,profile_balance.value,id);
+        addSession(id,profile_username.value,profile_email.value,profile_balance.value,profile_newpass.value,'buyer')
     }
 
 }
@@ -80,14 +72,12 @@ if(editBtn){editBtn.addEventListener('click',editValidate)}
 
 function editValidate(){
 
-    console.log("edited")
     profile_username.disabled=false;
     profile_username.focus();
     profile_username.style.backgroundColor= "#d8d8d8";
 
     profile_balance.disabled=false;
     profile_balance.style.backgroundColor= "#d8d8d8";
-
     profile_saveBtn.disabled = false;
     
 }
@@ -106,7 +96,7 @@ if(logOutBtn){logOutBtn.addEventListener('click',logOut)}
 
 function logOut(){
 
-    editDb.loginUpdate(profile_username.value,profile_email.value,oldPass,profile_balance.value,'false','buyer',id);
-    window.location.replace("http://127.0.0.1:5502/index.html");
+    sessionStorage.clear();
+    window.location.replace("../index.html");
     
 }

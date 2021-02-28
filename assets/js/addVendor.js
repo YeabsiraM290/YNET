@@ -32,7 +32,6 @@ function userInfoValidation(e){
 
     e.preventDefault();
 
-
             let allGood = 0;
             let vendor_usernamelen = helpers.checkLength(vendor_username.value,4);
             let vendor_emaillen = helpers.ValidateEmail(vendor_email.value);
@@ -172,6 +171,7 @@ function userInfoValidation(e){
                 vendor_long.style.borderColor = 'grey';
                 vendor_dis.style.borderColor = 'grey';
                 vendor_companyname.style.borderColor = 'grey';
-            
+                alert("Succses")
+                window.location.replace("../index.html");
             }
 }

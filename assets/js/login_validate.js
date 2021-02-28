@@ -21,73 +21,32 @@ import * as addtoDB from './dataBaseInteraction.js';
 
 if(profile){profile.addEventListener('click',changeColor);}
 
+if(sessionStorage.getItem('id')){
 
-setTimeout(() => {
-    anyLoged()
-
-}, 500);
-
-function whoLoged(){
-
-    let transaction = addtoDB.DB.transaction(['login'], 'readwrite');
-    let objectStore = transaction.objectStore('login');
-    let request = objectStore.openCursor();
-    
-        request.onerror = function(event) {
-            console.err("error fetching data");
-        };
-    
-        request.onsuccess = function(event) {
-        let cursor = event.target.result;
-    
-            if (cursor) {
-    
-            if(cursor.value.logedin == "true"){
-                out.push(cursor.value.username);
-                out.push(cursor.value.password);
-                out.push(cursor.value.balance);
-                out.push(cursor.value.email);
-                out.push(cursor.value.id);
-
-                return true;
-            }
-
-        
-            cursor.continue();
-            }
-
-    return false;
-    }
-
+    paint(sessionStorage.getItem('balance'), sessionStorage.getItem('username'), sessionStorage.getItem('type'))
 }
 
+else{
+
+    dePaint();
+}
 
 function changeColor(e){
     loginemail.style.borderColor = "grey";
     loginpass.style.borderColor = "grey";
 }
 
-function anyLoged(){
+function addSession(id, username, email, balance, pass, type){
 
-     let any = whoLoged();
-
-
-    if(!any){
-
-        dePaint();
-    } 
-
-    else{
-
-        setTimeout(() => {
-
-            paint(out[2],out[0],"buyer");
-            
-        }, 500);
-
-      
-    }
+    sessionStorage.setItem('id', id);
+    sessionStorage.setItem('username', username);
+    sessionStorage.setItem('email', email);
+    sessionStorage.setItem('balance', balance);
+    sessionStorage.setItem('password', pass);
+    sessionStorage.setItem('type', type);
 }
+
+
 
 function paint(balance,userName,type){
 
@@ -105,7 +64,7 @@ function paint(balance,userName,type){
 
     else{
 
-        profile.innerHTML = `<a class="nav-link profile" href="sellerProfiel.html.html" data-abc="true"><i class="fas fa-user-circle userIcon"></i>
+        profile.innerHTML = `<a class="nav-link profile" href="sellerProfiel.html" data-abc="true"><i class="fas fa-user-circle userIcon"></i>
         <p class="userLoginLabel ml-1">Welcome<br><b class="loginSubtitle">${userName}</b></p></a>`
     }
 
@@ -154,12 +113,10 @@ function loginValidation(e){
                 if(pass == password){
 
                     balance = cursor.value.balance;
-                    logged = 'true'
                     type = cursor.value.user_type
 
-                    addtoDB.loginUpdate(Uname,Email,password,balance,logged,type,id);
-
                     $('#ModalForm').modal('hide');
+                    addSession(id,Uname,Email,balance,password,type)
                     paint(balance,Uname,type)
 
                     return;
@@ -183,4 +140,4 @@ function loginValidation(e){
     }
 }
 
-export{whoLoged,out};
+export{out};

@@ -5,6 +5,11 @@ body{
 
 }
 
+.dropdown-menu{
+
+    width: 20rem;
+    
+}
 .dropdown:hover>.dropdown-menu {
     display: block;
 
@@ -82,13 +87,11 @@ body{
 
     float: right;
     font-size: 0.7rem;
-    color: white;
 }
 
 .loginSubtitle{
 
     font-size: 1rem;
-    color: white;
 }
 
 .sellerIcon{
@@ -158,4 +161,67 @@ footer>ul>li>a{
 
   text-decoration: none;
   color: white;
+}
+
+.modal-content{
+    background-color:  rgba(255, 255, 255, 0);
+}
+
+.modal-dialog{
+    background-color:  rgba(255, 255, 255, 0);
+    border-radius: 1rem;
+}
+
+.main-section{
+	margin: 0 auto;
+	margin-top:100px;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 0px;
+}
+.user-img{
+	margin-top:-50px;
+}
+.user-img img{
+	height: 100px;
+	width: 100px;
+}
+.user-name{
+	margin:10px 0px;
+}
+.user-name h1{
+	font-size:30px;
+	color:#676363;
+}
+.user-name button{
+	position: absolute;	
+	top:-50px;
+	right:20px;
+	font-size:30px;
+}
+.form-input button{
+	width: 100%;
+	margin-bottom: 20px;
+}
+.link-part{
+
+    font-size: 0.9rem;
+	border-radius:0px 0px 5px 5px;
+    padding-left:15px;
+    padding-right:15px;
+    padding-bottom:15px;
+    padding-top:7px;
+
+}
+
+#forgetPass{
+    font-size: 0.7rem;
+}
+.open-modal{
+	margin-top:100px !important;
+}
+
+#signup{
+
+    width: 50rem !important;
 }

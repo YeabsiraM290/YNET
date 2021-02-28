@@ -3,11 +3,9 @@ let addTologin;
 let addNewuser;
 let addNewseller;
 let addNewItem;
-let editProfile;
 let fetch_img;
-let loginUpdate;
-let whoLoged;
 let userUpdate;
+let loginUpdate;
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -51,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         loginValidation_tabel.createIndex('password', 'password', { unique: false });
         loginValidation_tabel.createIndex('balance', 'balance', { unique: false });
         loginValidation_tabel.createIndex('user_type', 'user_type', { unique: false });
-        loginValidation_tabel.createIndex('logedin', 'logedin', { unique: false });
 
         //items tabel
         let items_tabel = db.createObjectStore('items', { keyPath: 'id', autoIncrement: true});
@@ -214,33 +211,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    editProfile = function (id,username, password, blance,email) {
-        
-        let editInfo= {
-
-            username: username,
-            email: email,
-            balance:balance,
-            password: password,
-            user_type : user_type,
-        }
+    loginUpdate = function (Uname,Email,password,balance,type,id){
 
         let transaction = DB.transaction(['login'], 'readwrite');
-
-        let editDataLogin = transaction.objectStore('login');
-
-        let request = editDataLogin.put(addtoLogin);
-
-        request.onsuccess = () => {
-                
-            
+        let objectStore = transaction.objectStore('login');
+    
+        let newValue = {
+            id:id,
+            username:Uname,
+            email:Email,
+            password:password,
+            user_type:type,
+            balance:balance,
         }
-
-        request.onerror = () =>{
-
-            
-        }
-
+    
+        objectStore.put(newValue); 
     }
 
     userUpdate = function (Uname,Email,password,balance,id){
@@ -254,24 +239,6 @@ document.addEventListener('DOMContentLoaded', () => {
             email:Email,
             password:password,
             balance:balance,
-        }
-    
-        objectStore.put(newValue); 
-    }
-
-    loginUpdate = function (Uname,Email,password,balance,logged,type,id){
-
-        let transaction = DB.transaction(['login'], 'readwrite');
-        let objectStore = transaction.objectStore('login');
-    
-        let newValue = {
-            id:id,
-            username:Uname,
-            email:Email,
-            password:password,
-            user_type:type,
-            balance:balance,
-            logedin:logged,
         }
     
         objectStore.put(newValue); 
@@ -307,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 
-  export{DB,addNewItem,addNewseller,addNewuser,addTologin,fetch_img,loginUpdate,whoLoged,userUpdate};
+  export{DB,addNewItem,addNewseller,addNewuser,addTologin,fetch_img,userUpdate,loginUpdate};
 
 
 
