@@ -115,7 +115,9 @@ function loginValidation(e){
                     balance = cursor.value.balance;
                     type = cursor.value.user_type
 
-                    $('#ModalForm').modal('hide');
+                    $(function () {
+                        $('#loginWindow').modal('toggle');
+                     });
                     addSession(id,Uname,Email,balance,password,type)
                     paint(balance,Uname,type)
 
@@ -134,10 +136,9 @@ function loginValidation(e){
             loginpass.style.borderColor = "red";
             loginpass.style.borderWidth = "1px";
             loginpass.value = ""; 
-            console.log("No")
             return;
         }
     }
 }
 
-export{out};
+export{addSession};

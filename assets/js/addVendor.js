@@ -7,8 +7,7 @@ let vendor_password = document.querySelector('.vendor-password');
 let vendor_confirmpass = document.querySelector('.vendor-confirmpass');
 let vendor_phoneno = document.querySelector('.vendor-phoneno');
 let vendor_securityno = document.querySelector('.vendor-securityno');
-let vendor_lat = document.querySelector('.vendor-lat');
-let vendor_long = document.querySelector('.vendor-long');
+let vendor_loc = document.querySelector('.locationDisplay');
 let vendor_dis = document.querySelector('.vendor-dis');
 let vendor_companyname = document.querySelector('.vendor-companyname');
 let vendor_signup = document.querySelector('.vendor-signup');
@@ -39,10 +38,9 @@ function userInfoValidation(e){
             let vendor_confirmpasslen = helpers.comparePass(vendor_password.value, vendor_confirmpass.value); 
             let vendor_phonenolen = helpers.validatePhoneNumber(vendor_phoneno.value);
             let vendor_securitynolen = helpers.checkLength(vendor_securityno.value,6);
-            let vendor_latlen = helpers.checkLength(vendor_lat.value,1);
             let vendor_companynamelen = helpers.checkLength(vendor_companyname.value,4);
-            let vendor_longlen = helpers.checkLength(vendor_long.value,1); 
             let vendor_dislen = helpers.checkLength(vendor_dis.value, 30); 
+            //let vendor_location =  geoFindMe(success)
 
             
             if(!vendor_usernamelen){
@@ -82,25 +80,6 @@ function userInfoValidation(e){
                 allGood=1;
             }
 
-            if(!vendor_latlen){
-
-                vendor_lat.style.borderWidth = "1px";
-                vendor_lat.style.borderColor = "red";
-                vendor_lat.value = "";
-                vendor_lat.placeholder = "Latitude cannot be empty";
-                allGood=1;
-            }
-
-            
-            if(!vendor_longlen){
-
-                vendor_long.style.borderWidth = "1px";
-                vendor_long.style.borderColor = "red";
-                vendor_long.value = "";
-                vendor_long.placeholder = "Longitude cannot be empty";
-                allGood=1;
-            }
-
             if(!vendor_dislen){
 
                 vendor_dis.style.borderWidth = "1px";
@@ -136,6 +115,12 @@ function userInfoValidation(e){
                 allGood=1;
             }
 
+            // if(vendor_location===false){
+
+            //     vendor_loc.innerHTML = "Could not find your location"
+            //     allGood=1;
+            // }
+
             if(allGood==0){
 
                 let vusername = vendor_username.value;
@@ -143,12 +128,14 @@ function userInfoValidation(e){
                 let vemail = vendor_email.value;
                 let vphoneno = vendor_phoneno.value;
                 let vsocialno = vendor_securityno.value;
-                let vlocation = vendor_lat.value + vendor_long.value;
+                let vlocation = "vendor_location"
                 let vdisc = vendor_dis.value;
                 let vcname = vendor_companyname.value;
-                         
+
+                vendor_loc.innerHTML = "Your Location is"
                 addtoDB.addNewseller(vusername,vemail, vpassword ,vphoneno,vsocialno,vlocation,vdisc,vcname,plan);
-                addtoDB.addTologin(vusername, vemail, vpassword, "seller");
+                addtoDB.addTologin(vusername, vemail, vpassword, "1000","seller");
+
 
                 vendor_username.value = '';
                 vendor_email.value = ''; 
@@ -156,8 +143,6 @@ function userInfoValidation(e){
                 vendor_confirmpass.value = ''; 
                 vendor_phoneno.value = ''; 
                 vendor_securityno.value = ''; 
-                vendor_lat.value = ''; 
-                vendor_long.value = ''; 
                 vendor_dis.value = ''; 
                 vendor_companyname.value = ''; 
 
@@ -167,11 +152,31 @@ function userInfoValidation(e){
                 vendor_confirmpass.style.borderColor = 'grey';
                 vendor_phoneno.style.borderColor = 'grey';
                 vendor_securityno.style.borderColor = 'grey';
-                vendor_lat.style.borderColor = 'grey';
-                vendor_long.style.borderColor = 'grey';
                 vendor_dis.style.borderColor = 'grey';
                 vendor_companyname.style.borderColor = 'grey';
-                alert("Succses")
+                alert("Sign up successful")
                 window.location.replace("../index.html");
             }
+
 }
+
+function geoFindMe(callback) {
+
+    if(!navigator.geolocation) {
+
+      return false
+
+    } else {
+      
+        navigator.geolocation.getCurrentPosition(callback);
+  
+    }
+  
+  }
+
+  function success(position) {
+     let latitude  = position.coords.latitude;
+     let longitude = position.coords.longitude;
+
+    return [longitude,latitude]
+  }

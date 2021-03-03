@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/viewAll.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>All</title>
+</head>
+<body>
+          <!--Nav-->
+      <!--Nav-->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+        </button>
+       
+           <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    
+            <ul class="navbar-nav">
+    
+              <div class="dropdown">
+                <button class="dropdownBtn mr-3 mt-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-bars menuIcon"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <p class="dropdown-item"><b>Shop by department</b></p>
+                  <a class="dropdown-item mt-3" href="departmentView.html?id=Electronics">Electronics </a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Home and tools">Home and tools</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Health and sport">Health and sport</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Software and services">Software and services</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Automative and industrial">Automative and industrial</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Toys and drones">Toys and drones</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Gaming">Gaming</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Office solutions">Office solutions</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Beauty and personal care">Beauty and personal care</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Movies and television">Movies and television</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Sports and outdoors">Sports and outdoors</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Arts and crafts">Arts and crafts</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Smart home">Smart home</a>
+                </div>
+              </div>
+                <li class="nav-item mr-5 "> <a class="navbar-brand" href="index.html" data-abc="true">YNET
+                  <span><i class="fas fa-tags brandIcon"></i></span></a>  </li>
+    
+                <li class="nav-item  ">  <form class="form-inline mt-2"> <input class="form-control searchBar" type="text" placeholder="Search"> 
+                  <button class="btn btn-secondary searchButton" type="submit"><i class="fas fa-search searchIcon"></i></button> </form> </li>
+                
+                <li class="nav-item ml-5 profile"> <a class="nav-link profile" href="#loginWindow" data-toggle="modal" data-abc="true"><i class="fas fa-user-circle userIcon"></i>
+                  <p class="userLoginLabel ml-1">Welcome<br><b class="loginSubtitle">sign in / Register</b></p></a> </li>
+    
+                <li class="nav-item mt-3 ml-3 vendorIcon balance"> <a class="nav-link sellerIcon" href="vendorRegistration.html" data-abc="true"><b class="vendor_balance">Vendor</b></a> </li>
+                <li class="nav-item ml-4 mt-1 cartIcon"> <a class="nav-link" href="cart.html" data-abc="true"><i class="fas fa-shopping-cart cartIcon"></i></a> </li>
+            </ul>
+           
+        </div>
+    </nav>
+
+    
+    <!--User Login Window-->
+    
+    <div id="loginWindow" class="modal loginModal fade text-center">
+    
+      <div class="modal-dialog">
+    
+        <div class="col-lg-8 col-sm-8 col-12  main-section">
+    
+          <div class="modal-content">
+    
+            <div class="mt-4">
+              <i class="fas fa-user-circle userIcon"></i>
+            </div>
+            
+            <div class="col-lg-12 col-sm-12 col-12 user-name">
+              <h1>Login</h1>
+              <button type="button" class="close" data-dismiss="modal"><h5>x</h5></button>
+            </div>
+    
+            <div class="col-lg-12 col-sm-12 col-12 form-input">
+              
+              <form>
+    
+                <div class="form-group">
+                  
+                  <input type="text" class="form-control loginemail" name="eu" placeholder="Enter email or username">
+                </div>
+    
+                <div class="form-group">
+                
+                  <input type="password" class="form-control loginpass" name="pass" placeholder="Password">
+                </div>
+        
+                <button type="submit" class="btn btn-success loginBtn">Login</button>
+                <a href="#" id="forgetPass" target="_blank">Forgot Password?</a>
+    
+              </form>
+    
+            </div>
+    
+            <div class="col-lg-12 col-sm-12 col-12 link-part">
+              <a href="#buyerSignup" class="registerButton" data-toggle="modal">Register</a>
+          </div>
+    
+          </div>
+    
+        </div>
+    
+      </div>
+    
+    </div>
+    
+    <!--User Signup Window-->
+    
+    <div id="buyerSignup" class="modal signupModal fade text-center">
+    
+      <div class="modal-dialog">
+    
+        <div class="col-lg-9 col-sm-9 col-9 main-section">
+    
+          <div class="modal-content">
+    
+            <div class="mt-4">
+              <i class="fas fa-user-circle userIcon"></i>
+            </div>
+            
+            <div class="col-lg-12 col-sm-12 col-12 user-name">
+              <h1>Signup</h1>
+              <button type="button" class="close" data-dismiss="modal"><h5>x</h5></button>
+            </div>
+    
+            <div class="col-lg-12 col-sm-12 col-12 form-input">
+              
+              <form>
+    
+            
+                <div class="form-group">
+                  <label>Username: </label>
+                  <input type="text" required class="form-control signupUsername" placeholder="Enter username">
+                </div>
+    
+                <div class="form-group">
+                  <label>Email: </label>
+                  <input type="email" required class="form-control signupemail" placeholder="Enter email">
+                </div>
+    
+                <div class="form-group">
+                  <label>Password: </label>
+                  <input type="password" required class="form-control signuppassword" name="password" placeholder="Password (must be at least 8 characters)">
+                </div>
+    
+                <div class="form-group">
+                  <label>Confirm password : </label>
+                  <input type="password" required class="form-control signupconfirmpassword" placeholder="confirm password">
+                </div>
+              
+                <button type="submit" class="btn btn-success signupBtn">Signup</button>
+               
+              </form>
+    
+            </div>
+    
+    
+          </div>
+    
+        </div>
+    
+      </div>
+    
+    </div>
+
+    <div class="container viewall mt-3">
+
+    </div>
+
+    <script src="./assets/js/displayAll.js" type="module"></script>
+    <script src="./assets/js/login_validate.js" type="module"></script>
+    <script src="./assets/js/addUser.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/0024212ba5.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

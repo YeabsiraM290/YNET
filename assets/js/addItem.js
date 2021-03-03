@@ -5,10 +5,10 @@ let item_quantity = document.querySelector('.item-quantity');
 let item_price = document.querySelector('.item-price');
 let item_dis = document.querySelector('.item-dis');
 let item_ppts = document.querySelector('.item-ppts');
-let item_img1 = document.querySelector('.item-img1');
-let item_img2 = document.querySelector('.item-img2');
-let item_img3 = document.querySelector('.item-img3');
-let item_img4 = document.querySelector('.item-img4');
+let item_img1 = document.querySelector('.itemimg1');
+let item_img2 = document.querySelector('.itemimg2');
+let item_img3 = document.querySelector('.itemimg3');
+let item_img4 = document.querySelector('.itemimg4');
 let item_add = document.querySelector('.item-add');
 
 import * as addtoDb from './dataBaseInteraction.js';
@@ -25,11 +25,24 @@ import * as helpers from './helper.js';
             let item_pptsLen = helpers.checkLength(item_ppts.value,30);
             let item_quantityLen = helpers.checkSign(item_quantity.value);
             let item_priceLen = helpers.checkSign(item_price.value);
-    
-            let item_img1Address = item_img1.src
-            let item_img2Address  = item_img2.src
-            let item_img3Address  = item_img3.src
-            let item_img4Address  = item_img4.src
+            let item_img1Address = item_img1.value
+            let item_img2Address  = " "
+            let item_img3Address  = " " 
+            let item_img4Address  = " "
+
+            if(item_img2){
+                item_img2Address = item_img2.value
+            }
+
+            if(item_img3){
+                item_img3Address = item_img3.value
+            }
+
+            if(item_img4){
+                item_img4Address = item_img4.value
+            }
+            
+      
             let allG = 0;
     
             if(!item_nameLen){
@@ -72,6 +85,14 @@ import * as helpers from './helper.js';
                 item_price.placeholder = "Enter valid price";
                 allG=1;
             }
+
+            if(!item_img1Address){
+    
+                item_img1.style.borderWidth = "1px";
+                item_img1.style.borderColor = "red";
+                item_img1.placeholder = "You have to enetr at least one image";
+                allG=1;
+            }
     
     
             if(allG==0){
@@ -83,17 +104,23 @@ import * as helpers from './helper.js';
                 let qun = item_quantity.value
                 let dep = item_department.value
     
-                addtoDb.addNewItem(dis,"Yeabsira",ppt,pric,iname,item_img1Address,item_img2Address,item_img3Address,item_img4Address, qun,qun,dep,"0")
-                
+                addtoDb.addNewItem(dis,sessionStorage.getItem('username'),ppt,pric,iname,item_img1Address,item_img2Address,item_img3Address,item_img4Address, qun,qun,dep,"0")
+                item_name.style.borderColor = "#dde1e5";
+                item_dis.style.borderColor ="#dde1e5";
+                item_ppts.style.borderColor = "#dde1e5";
+                item_quantity.style.borderColor = "#dde1e5";
+                item_price.style.borderColor = "#dde1e5";
+                item_img1.style.borderColor = "#dde1e5";
                 item_name.value = "";
                 item_quantity.value = "";
                 item_price.value = "";
                 item_dis.value = "";
                 item_ppts.value = "";
-                item_img1.src = " ";
-                item_img2.src = " ";
-                item_img3.src = " ";
-                item_img4.src = " ";
+                item_img1.value = " ";
+                item_img2.value = " ";
+                item_img3.value = " ";
+                item_img4.value = " ";
+                alert("Item added succsefuly")
             }
          
     }

@@ -20,6 +20,7 @@
 
 </head>
 <body>
+    <!--Nav-->
       <!--Nav-->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
 
@@ -38,19 +39,19 @@
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <p class="dropdown-item"><b>Shop by department</b></p>
-                  <a class="dropdown-item mt-3" href="#">Electronics </a>
-                  <a class="dropdown-item mt-3" href="#">Home and tools</a>
-                  <a class="dropdown-item mt-3" href="#">Health and sport</a>
-                  <a class="dropdown-item mt-3" href="#">Software and services</a>
-                  <a class="dropdown-item mt-3" href="#">Automative and industrial</a>
-                  <a class="dropdown-item mt-3" href="#">Toys and drones</a>
-                  <a class="dropdown-item mt-3" href="#">Gaming</a>
-                  <a class="dropdown-item mt-3" href="#">Office solutions</a>
-                  <a class="dropdown-item mt-3" href="#">Beauty and personal care</a>
-                  <a class="dropdown-item mt-3" href="#">Movies and television</a>
-                  <a class="dropdown-item mt-3" href="#">Sports and outdoors</a>
-                  <a class="dropdown-item mt-3" href="#">Arts and crafts</a>
-                  <a class="dropdown-item mt-3" href="#">Smart home</a>
+                  <a class="dropdown-item mt-3" href="departmentView.html?id=Electronics">Electronics </a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Home and tools">Home and tools</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Health and sport">Health and sport</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Software and services">Software and services</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Automative and industrial">Automative and industrial</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Toys and drones">Toys and drones</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Gaming">Gaming</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Office solutions">Office solutions</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Beauty and personal care">Beauty and personal care</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Movies and television">Movies and television</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Sports and outdoors">Sports and outdoors</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Arts and crafts">Arts and crafts</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Smart home">Smart home</a>
                 </div>
               </div>
                 <li class="nav-item mr-5 "> <a class="navbar-brand" href="index.html" data-abc="true">YNET
@@ -59,72 +60,82 @@
                 <li class="nav-item  ">  <form class="form-inline mt-2"> <input class="form-control searchBar" type="text" placeholder="Search"> 
                   <button class="btn btn-secondary searchButton" type="submit"><i class="fas fa-search searchIcon"></i></button> </form> </li>
                 
-                <li class="nav-item ml-5 "> <a class="nav-link" href="#loginWindow" data-toggle="modal" data-abc="true"><i class="fas fa-user-circle userIcon"></i>
+                <li class="nav-item ml-5 profile"> <a class="nav-link profile" href="#loginWindow" data-toggle="modal" data-abc="true"><i class="fas fa-user-circle userIcon"></i>
                   <p class="userLoginLabel ml-1">Welcome<br><b class="loginSubtitle">sign in / Register</b></p></a> </li>
     
-                <li class="nav-item mt-3 ml-3"> <a class="nav-link sellerIcon" href="vendorRegistration.html" data-abc="true"><b>Vendor</b></a> </li>
-                <li class="nav-item ml-4 mt-2"> <a class="nav-link" href="cart.html" data-abc="true"><i class="fas fa-shopping-cart cartIcon"></i></a> </li>
+                <li class="nav-item mt-3 ml-3 vendorIcon balance"> <a class="nav-link sellerIcon" href="vendorRegistration.html" data-abc="true"><b class="vendor_balance">Vendor</b></a> </li>
+                <li class="nav-item ml-4 mt-1 cartIcon"> <a class="nav-link" href="cart.html" data-abc="true"><i class="fas fa-shopping-cart cartIcon"></i></a> </li>
             </ul>
            
         </div>
     </nav>
-<!-- end nav -->
 
-        <!-- profile -->
-        <div class="container profilecontainer mt-5 mb-5">
-        
-          <h1 class="display-4 text-center">Profile</h1>
-        
-          <a href="#" class="edit"><i class="fa fa-edit"></i></a>
-          <br>
-          
-          <hr class="ml-auto">
-        
-          <form class="form">
-        
-            <div class="form-group row ml-1 mt-5">
-        
-              <label for="UserName" class="col-sm-2 col-form-label">UserName</label>
-        
-              <div class="col-sm-10 ">
-                <input type="text" readonly class="form-control" id="UserName" value="UserName">
-              </div>
-        
-            </div>
-        
-            <div class="form-group row ml-1  mt-5">
-        
-              <label for="Email" class="col-sm-2 col-form-label">Email</label>
-        
-              <div class="col-sm-10">
-                <input type="email" readonly class="form-control" id="Email" value="email@example.com">
-              </div>
-        
-            </div>
-        
-            <div class="form-group row ml-1 mt-5 mb-5">
-        
-              <label for="Phone_Number" class="col-sm-2 col-form-label">Phone Number</label>
-        
-              <div class="col-sm-10">
-                <input type="text" readonly class="form-control" id="Phone_Number" value="0923-34-45-56">
-              </div>
-        
-              <a href="" style="color: orange;" class="change ml-3 mt-4">Change password</a>
-              
-        
-            </div>
-        
-            <div class="form-group text-center mt-5">
-        
-              <input class="form-control-lg saveBtn" type="submit" disabled value="Save" id="submit" >
-        
-          </div>
-          
-          
-          </form>
-          
+  <div class="container profilecontainer mt-5 mb-5">
+  
+    <h1 class="display-4 text-center">Profile</h1>
+  
+    <a href="#" class="editBtn"><i class="fa fa-edit"></i></a>
+    
+    <br>
+    
+    <hr class="ml-auto">
+  
+    <form class="form">
+  
+      <div class="form-group row ml-1 mt-4">
+  
+        <label for="UserName" class="col-sm-2 col-form-label">Username:</label>
+  
+        <div class="col-sm-10 ">
+          <input type="text" disabled class="form-control profile_username" name="UserName">
         </div>
+  
+      </div>
+  
+      <div class="form-group row ml-1  mt-4">
+  
+        <label for="Email" class="col-sm-2 col-form-label">Email:</label>
+  
+        <div class="col-sm-10">
+          <input type="email" disabled class="form-control profile_email" name="Email">
+        </div>
+  
+      </div>
+  
+      <div class="form-group row ml-1 mt-4">
+  
+        <label for="balance" class="col-sm-2 col-form-label ">Balance:</label>
+  
+        <div class="col-sm-10">
+          <input type="number" disabled class="form-control profile_balance" name="balance">
+        </div>
+  
+        <a href="#" style="color: orange;" class="change ml-3 mt-4 profile_changepass">Change password</a>
+  
+      </div>
+  
+      <div class="form-group profile_changepassContainer row ml-1">
+  
+        <div class="col-sm-10">
+          <label for="newPass" class="col-form-label ">New password:</label>
+          <input type="text" class="form-control profile_newpass" name="balance">
+  
+          <label for="conPass" class="col-form-label ">Confirm password:</label>
+          <input type="text" class="form-control profile_ConNewpass" name="conPass">
+        </div>
+  
+      </div>
+  
+      <div class="form-group text-center">
+        <button type="submit" style="background-color: #f7a943; border: none; font-size: 1.2rem;" disabled class="btn btn-primary btn-lg btn-block profile_saveBtn mt-5">Save</button>
+    </div>
+  
+    <a href="#" class="logOutBtn ml-4 mb-5" style="color: #f7a943;">Logout</a>
+    
+    </form>
+  
+  </div>
+
         <div class=" mt-5 mb-5">
 
           <h1 class="display-4 text-center">My Products</h1>
@@ -132,75 +143,9 @@
           <hr class="ml-auto">
           
           <a style="font-size: 2rem; margin-left: 80rem; color: black;"  href="addNewItem.html" ><i class="fas fa-plus"></i></a>
-          
-          <div class="row cartRow firstRow mb-4">
-            <div class="col-6 mt-4"><img style="float: left;" src="./assets/images/mac.jpg" alt="First slide" width="200px" height="200px">
-               Product name....<br>
-               <hr>
-               <p >
-              Sold: 45<br>
-              Rating: <i class="fas fa-star"></i> <i class="fas fa-star-half-alt"></i>
-                      <i class="far fa-star"></i><i class="far fa-star"></i>
-                      <i class="far fa-star"></i>
-              </p>
-             </div>
-        
-              <div class="col-2 mt-4">
-                Avilable Amount: 
-                <input type="number" value="1" class="inputField ml-5 quantity text-center" >
-                
-              </div>
-             
-            <div class="col-3 mt-4"><h5><b>Price: <br>$50.00</b></h5></div>
-            <div class="col-1 mt-2">  <a href="#" class="edit"><i class="fa fa-edit"></i></a><i class="far fa-trash-alt"></i></div>
+          <div class="itemRow">
+            
           </div>
-
-          <div class="row cartRow mb-4">
-            <div class="col-6 mt-4"><img style="float: left;" src="./assets/images/mac.jpg" alt="First slide" width="200px" height="200px">
-               Product name....<br>
-               <hr>
-               <p >
-              Sold: 45<br>
-              Rating: <i class="fas fa-star"></i> <i class="fas fa-star-half-alt"></i>
-                      <i class="far fa-star"></i><i class="far fa-star"></i>
-                      <i class="far fa-star"></i>
-              </p>
-             </div>
-        
-              <div class="col-2 mt-4">
-                Avilable Amount: 
-                <input type="number" value="1" class="inputField ml-5 quantity text-center" >
-                
-              </div>
-             
-            <div class="col-3 mt-4"><h5><b>Price: <br>$50.00</b></h5></div>
-            <div class="col-1 mt-2">  <a href="#" class="edit"><i class="fa fa-edit"></i></a><i class="far fa-trash-alt"></i></div>
-          </div>
-        
-
-          <div class="row cartRow mb-5">
-            <div class="col-6 mt-4"><img style="float: left;" src="./assets/images/mac.jpg" alt="First slide" width="200px" height="200px">
-               Product name....<br>
-               <hr>
-               <p >
-              Sold: 45<br>
-              Rating: <i class="fas fa-star"></i> <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i> <i class="far fa-star"></i>
-                      <i class="far fa-star"></i>
-              </p>
-             </div>
-        
-              <div class="col-2 mt-4">
-                Avilable Amount: 
-                <input type="number" value="1" class="inputField ml-5 quantity text-center" >
-                
-              </div>
-             
-            <div class="col-3 mt-4"><h5><b>Price: <br>$50.00</b></h5></div>
-            <div class="col-1 mt-2">  <a href="#" class="edit"><i class="fa fa-edit"></i></a><i class="far fa-trash-alt"></i></div>
-          </div>
-        
-        
         </div>
         
         
@@ -275,6 +220,6 @@
           
           </footer>
           <script src="./assets/js/login_validate.js" type="module"></script>
-          <script src="./assets/js/editProfile.js" type="module"></script>
+          <script src="./assets/js/editSellerProfile.js" type="module"></script>
 </body>
 </html>

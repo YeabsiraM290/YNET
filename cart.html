@@ -18,7 +18,9 @@
 </head>
 <body>
      <!--Nav-->
-       <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+      <!--Nav-->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
            <span class="navbar-toggler-icon"></span>
@@ -33,9 +35,20 @@
                   <i class="fas fa-bars menuIcon"></i>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <p class="dropdown-item"><b>Shop by department</b></p>
+                  <a class="dropdown-item mt-3" href="departmentView.html?id=Electronics">Electronics </a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Home and tools">Home and tools</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Health and sport">Health and sport</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Software and services">Software and services</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Automative and industrial">Automative and industrial</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Toys and drones">Toys and drones</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Gaming">Gaming</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Office solutions">Office solutions</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Beauty and personal care">Beauty and personal care</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Movies and television">Movies and television</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Sports and outdoors">Sports and outdoors</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Arts and crafts">Arts and crafts</a>
+                  <a class="dropdown-item mt-3" href="#departmentView.html?id=Smart home">Smart home</a>
                 </div>
               </div>
                 <li class="nav-item mr-5 "> <a class="navbar-brand" href="index.html" data-abc="true">YNET
@@ -44,15 +57,16 @@
                 <li class="nav-item  ">  <form class="form-inline mt-2"> <input class="form-control searchBar" type="text" placeholder="Search"> 
                   <button class="btn btn-secondary searchButton" type="submit"><i class="fas fa-search searchIcon"></i></button> </form> </li>
                 
-                <li class="nav-item ml-5 "> <a class="nav-link" href="#" data-abc="true"><i class="fas fa-user-circle userIcon"></i>
-                  <p class="userLoginLabel ml-1">Welcome<br><b class="loginSubtitle">User Name</b></p></a> </li>
+                <li class="nav-item ml-5 profile"> <a class="nav-link profile" href="#loginWindow" data-toggle="modal" data-abc="true"><i class="fas fa-user-circle userIcon"></i>
+                  <p class="userLoginLabel ml-1">Welcome<br><b class="loginSubtitle">sign in / Register</b></p></a> </li>
     
-                <li class="nav-item mt-3 ml-4"> <p class="loginSubtitle ml-2">Balance<br><b class="userLoginLabel">2000 coin</b></p></a> </li>
-                <li class="nav-item ml-4 mt-2 ml-2"> <a class="nav-link" href="cart.html" data-abc="true"><i class="fas fa-shopping-cart cartIcon"></i></a> </li>
+                <li class="nav-item mt-3 ml-3 vendorIcon balance"> <a class="nav-link sellerIcon" href="vendorRegistration.html" data-abc="true"><b class="vendor_balance">Vendor</b></a> </li>
+                <li class="nav-item ml-4 mt-1 cartIcon"> <a class="nav-link" href="cart.html" data-abc="true"><i class="fas fa-shopping-cart cartIcon"></i></a> </li>
             </ul>
            
         </div>
     </nav>
+
 <!-- end nav -->
 <div class="title">
   <h5 class="display-4 mt-5" style="font-size: 2rem !important;">Shopping Cart </h5>
